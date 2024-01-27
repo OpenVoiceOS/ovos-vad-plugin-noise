@@ -13,7 +13,7 @@ should only be used as fallback, works in all platforms including 32bit systems
         "VAD": {
             "module": "ovos-vad-plugin-noise",
             "ovos-vad-plugin-noise": {
-                "method": "all",
+                "method": "ratio",
                 "max_current_ratio_threshold": 2.0,
                 "initial_energy_threshold": 1000.0
             }
@@ -30,18 +30,18 @@ Arguments
     max_current_ratio_threshold: Optional[float] = 2.0
         Ratio of max/current energy below which audio is considered speech
 
-    current_energy_threshold: Optional[float] = 1000.0
+    energy_threshold: Optional[float] = None
         Energy threshold above which audio is considered speech
 
-    silence_method: SilenceMethod = "all"
+    silence_method: SilenceMethod = "ratio"
         Method for deciding if an audio chunk contains silence or speech
 
 Methods
 
-    RATIO_ONLY
+    RATIO
       Only use max/current energy ratio threshold
 
-    CURRENT_ONLY
+    THRESHOLD
       Only use current energy threshold
 
     ALL

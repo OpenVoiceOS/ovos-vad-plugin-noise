@@ -22,17 +22,17 @@ class SilenceMethod(str, Enum):
 
     Values
     ------
-    RATIO_ONLY
+    RATIO
       Only use max/current energy ratio threshold
 
-    CURRENT_ONLY
+    THRESHOLD
       Only use current energy threshold
 
     ALL
       max/current energy ratio, and current energy threshold
     """
-    RATIO_ONLY = "ratio_only"
-    CURRENT_ONLY = "current_only"
+    RATIO = "ratio"
+    THRESHOLD = "threshold"
     ALL = "all"
 
 
@@ -70,7 +70,7 @@ class SilenceDetector:
         self.silence_method = silence_method
 
         if self.silence_method in [
-            SilenceMethod.RATIO_ONLY,
+            SilenceMethod.RATIO,
             SilenceMethod.ALL,
         ]:
             self.use_ratio = True
@@ -81,7 +81,7 @@ class SilenceDetector:
             self.use_ratio = False
 
         if self.silence_method in [
-            SilenceMethod.CURRENT_ONLY,
+            SilenceMethod.THRESHOLD,
             SilenceMethod.ALL,
         ]:
             self.use_current = True
