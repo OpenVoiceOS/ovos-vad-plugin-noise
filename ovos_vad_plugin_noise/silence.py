@@ -65,6 +65,7 @@ class SilenceDetector:
 
         self.max_energy = max_energy
         self.dynamic_max_energy = max_energy is None
+        self.dynamic_thresh = current_energy_threshold is None
         self.max_current_ratio_threshold = max_current_ratio_threshold
         self.current_energy_threshold = current_energy_threshold
         self.silence_method = silence_method
@@ -85,9 +86,6 @@ class SilenceDetector:
             SilenceMethod.ALL,
         ]:
             self.use_current = True
-            assert (
-                    self.current_energy_threshold is not None
-            ), "Current energy threshold is required"
         else:
             self.use_current = False
 
@@ -96,6 +94,8 @@ class SilenceDetector:
 
     def reset(self):
         self.energy = 0
+        if self.dynamic_thresh and self.max_energy:
+            self.current_energy_threshold = self.max_energy * 0.3
         if self.dynamic_max_energy:
             self.max_energy = None
 
@@ -125,9 +125,8 @@ class SilenceDetector:
 
                 assert self.max_current_ratio_threshold is not None
                 all_silence = all_silence and (ratio > self.max_current_ratio_threshold)
-            elif self.use_current:
+            elif self.use_current and self.current_energy_threshold is not None:
                 # Current energy compared to threshold
-                assert self.current_energy_threshold is not None
                 all_silence = all_silence and (energy < self.current_energy_threshold)
 
         if all_silence or not self.energy:
