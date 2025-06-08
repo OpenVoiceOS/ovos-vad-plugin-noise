@@ -1,16 +1,16 @@
 # Changelog
 
-## [0.0.0a3](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.0.0a3) (2024-09-11)
+## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.1a1) (2025-06-08)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/V0.0.0a2...0.0.0a3)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/V0.1.0...0.1.1a1)
 
 **Merged pull requests:**
 
-- chore:automations [\#1](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/pull/1) ([JarbasAl](https://github.com/JarbasAl))
+- fix: compatibility with ovos-plugin-manager 1.X.X [\#3](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/pull/3) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.0.0a2](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/V0.0.0a2) (2024-01-27)
+## [V0.1.0](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/V0.1.0) (2024-09-11)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0b4b347aedc92a6436feb9dcc331b700600ce30a...V0.0.0a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0.1.0...V0.1.0)
 
 
 
