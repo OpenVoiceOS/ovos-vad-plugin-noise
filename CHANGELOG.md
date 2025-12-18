@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3a2](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.3a2) (2025-12-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0.1.3a1...0.1.3a2)
+
+**Merged pull requests:**
+
+- chore: Configure Renovate [\#8](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/pull/8) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.1.3a1](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.3a1) (2025-11-22)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/V0.1.2...0.1.3a1)
