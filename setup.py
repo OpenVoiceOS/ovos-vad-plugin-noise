@@ -62,6 +62,12 @@ setup(
     packages=['ovos_vad_plugin_noise'],
     install_requires=required("requirements.txt"),
     zip_safe=True,
+    extras_require={
+        "test": [
+            "pytest",
+            "ovoscope",
+        ]
+    },
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
