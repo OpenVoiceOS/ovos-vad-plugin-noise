@@ -15,8 +15,6 @@ import wave
 import struct
 import pytest
 
-ovoscope = pytest.importorskip("ovoscope", reason="ovoscope not installed")
-
 FIXTURE = os.path.join(os.path.dirname(__file__), "fixtures", "command.wav")
 CHUNK_SIZE = 960  # 30 ms @ 16 kHz 16-bit mono
 
@@ -102,10 +100,6 @@ def test_voice_loop_utterance_from_fixture():
     The loop should emit recognizer_loop:wakeword, record_begin, record_end,
     and recognizer_loop:utterance.
     """
-    pytest.importorskip(
-        "ovos_dinkum_listener",
-        reason="ovos-dinkum-listener not installed; skipping full loop test",
-    )
     from ovoscope.voice_loop import (
         MiniVoiceLoop,
         MockHotWordEngine,
