@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3a4](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.3a4) (2026-06-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0.1.3a3...0.1.3a4)
+
+**Merged pull requests:**
+
+- test: ovoscope listener e2e \(real noise VAD\) [\#14](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/pull/14) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.3a3](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.3a3) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0.1.3a2...0.1.3a3)
