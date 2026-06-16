@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3a6](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.3a6) (2026-06-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0.1.3a5...0.1.3a6)
+
+**Merged pull requests:**
+
+- fix: require ovos-plugin-manager\>=2.1.0 for opm.\* entry points and cap ovos-\* deps at next major [\#18](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/pull/18) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.3a5](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.3a5) (2026-06-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0.1.3a4...0.1.3a5)
