@@ -23,7 +23,7 @@ classifiers = [
     "Topic :: Multimedia :: Sound/Audio :: Speech",
 ]
 dependencies = [
-    "ovos-plugin-manager>=0.0.11,<3.0.0",
+    "ovos-plugin-manager>=2.4.0a1",
 ]
 
 [project.optional-dependencies]
@@ -37,7 +37,7 @@ test = [
 Homepage = "https://github.com/OpenVoiceOS/ovos-vad-plugin-noise"
 Repository = "https://github.com/OpenVoiceOS/ovos-vad-plugin-noise"
 
-[project.entry-points."ovos.plugin.VAD"]
+[project.entry-points."opm.VAD"]
 "ovos-vad-plugin-noise" = "ovos_vad_plugin_noise:NoiseVAD"
 
 [tool.setuptools]
