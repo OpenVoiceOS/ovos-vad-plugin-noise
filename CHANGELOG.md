@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3a7](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.3a7) (2026-08-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0.1.3a6...0.1.3a7)
+
+**Merged pull requests:**
+
+- docs: rewrite README in Simplified Technical English [\#23](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/pull/23) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.3a6](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.3a6) (2026-06-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0.1.3a5...0.1.3a6)
