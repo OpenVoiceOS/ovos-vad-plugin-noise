@@ -1,11 +1,18 @@
 # Noise VAD
 
-simple VAD plugin extracted from the old [ovos-listener](https://github.com/OpenVoiceOS/ovos-listener/blob/dev/ovos_listener/silence.py)
+Noise VAD is a voice activity detection (VAD) plugin for [OpenVoiceOS](https://github.com/OpenVoiceOS). It decides if an audio chunk contains speech by looking at its energy level, not its content.
 
-should only be used as fallback, works in all platforms including 32bit systems
+The plugin comes from the old [ovos-listener](https://github.com/OpenVoiceOS/ovos-listener/blob/dev/ovos_listener/silence.py) project. Use it as a fallback VAD. It runs on all platforms, including 32-bit systems, because it needs no machine learning model.
 
-## Configuration
+## Install
 
+```bash
+pip install ovos-vad-plugin-noise
+```
+
+## Usage
+
+Set `ovos-vad-plugin-noise` as the VAD module in your listener configuration.
 
 ```javascript
 {
@@ -22,27 +29,25 @@ should only be used as fallback, works in all platforms including 32bit systems
 }
 ```
 
-Arguments
+### Arguments
 
-    max_energy: Optional[float] = None
-        Maximum denoise energy value (None for dynamic setting from observed audio)
+- `max_energy` (float, optional): maximum denoise energy value. If not set, the plugin sets it dynamically from the observed audio.
+- `max_current_ratio_threshold` (float, default `2.0`): ratio of max energy to current energy below which the plugin treats the audio as speech.
+- `energy_threshold` (float, optional): energy threshold above which the plugin treats the audio as speech. If not set, the plugin sets it dynamically from the observed audio.
+- `silence_method` (string, default `"all"`): method the plugin uses to decide if a chunk contains silence or speech. See Methods below.
 
-    max_current_ratio_threshold: Optional[float] = 2.0
-        Ratio of max/current energy below which audio is considered speech
+### Methods
 
-    energy_threshold: Optional[float] = None
-        Energy threshold above which audio is considered speech (None for dynamic setting from observed audio)
+- `RATIO`: use only the max/current energy ratio threshold.
+- `THRESHOLD`: use only the current energy threshold.
+- `ALL`: use both the max/current energy ratio and the current energy threshold.
 
-    silence_method: SilenceMethod = "all"
-        Method for deciding if an audio chunk contains silence or speech
+## Related projects
 
-Methods
+- [ovos-plugin-manager](https://github.com/OpenVoiceOS/ovos-plugin-manager) loads and manages this plugin.
+- [ovos-dinkum-listener](https://github.com/OpenVoiceOS/ovos-dinkum-listener) is the OVOS listener that uses VAD plugins like this one.
+- [ovos-listener](https://github.com/OpenVoiceOS/ovos-listener) is the original project this plugin's code came from.
 
-    RATIO
-      Only use max/current energy ratio threshold
+## License
 
-    THRESHOLD
-      Only use current energy threshold
-
-    ALL
-      max/current energy ratio, and current energy threshold
+Apache-2.0
