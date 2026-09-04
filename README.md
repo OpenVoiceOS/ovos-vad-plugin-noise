@@ -34,13 +34,16 @@ Set `ovos-vad-plugin-noise` as the VAD module in your listener configuration.
 - `max_energy` (float, optional): maximum denoise energy value. If not set, the plugin sets it dynamically from the observed audio.
 - `max_current_ratio_threshold` (float, default `2.0`): ratio of max energy to current energy below which the plugin treats the audio as speech.
 - `energy_threshold` (float, optional): energy threshold above which the plugin treats the audio as speech. If not set, the plugin sets it dynamically from the observed audio.
-- `silence_method` (string, default `"all"`): method the plugin uses to decide if a chunk contains silence or speech. See Methods below.
+- `method` (string, default `"all"`): method the plugin uses to decide if a chunk contains silence or speech. See Methods below.
 
 ### Methods
 
-- `RATIO`: use only the max/current energy ratio threshold.
-- `THRESHOLD`: use only the current energy threshold.
-- `ALL`: use both the max/current energy ratio and the current energy threshold.
+The values are lowercase. An unrecognized value, including an uppercase spelling such as
+`"ALL"`, is not rejected. It silently falls back to ratio-only detection.
+
+- `"ratio"`: use only the max/current energy ratio threshold.
+- `"threshold"`: use only the current energy threshold.
+- `"all"`: use both the max/current energy ratio and the current energy threshold.
 
 ## Related projects
 
