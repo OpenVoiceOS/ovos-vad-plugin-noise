@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3a8](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.3a8) (2026-09-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0.1.3a7...0.1.3a8)
+
+**Merged pull requests:**
+
+- docs: config key is 'method' not 'silence\_method'; method values are lowercase [\#25](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/pull/25) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.3a7](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/tree/0.1.3a7) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-vad-plugin-noise/compare/0.1.3a6...0.1.3a7)
